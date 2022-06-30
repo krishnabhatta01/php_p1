@@ -1,5 +1,5 @@
 <!-- ======== main-wrapper start =========== -->
-    <main class="main-wrapper">
+    
     
       <!-- ========== section start ========== -->
       <section class="section">
@@ -17,12 +17,7 @@
                 <div class="breadcrumb-wrapper mb-30">
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="#0">Dashboard</a>
-                      </li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        eCommerce
-                      </li>
+                      
                     </ol>
                   </nav>
                 </div>
@@ -912,11 +907,9 @@
                 <p class="text-sm">
                   Designed and Developed by
                   <a
-                    href="https://plainadmin.com"
-                    rel="nofollow"
-                    target="_blank"
+                    
                   >
-                    PlainAdmin
+                    _@Krishnabhatta
                   </a>
                 </p>
               </div>
@@ -940,5 +933,5 @@
         <!-- end container -->
       </footer>
       <!-- ========== footer end =========== -->
-    </main>
+    
     <!-- ======== main-wrapper end =========== -->

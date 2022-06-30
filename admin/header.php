@@ -23,8 +23,9 @@
 </head>
 <body>
 
-  <main class="">
+  
       <!-- ========== header start ========== -->
+      <main class="main-wrapper">
       <header class="header">
         <div class="container-fluid">
           <div class="row">
@@ -38,12 +39,7 @@
                     <i class="lni lni-chevron-left me-2"></i> Menu
                   </button>
                 </div>
-                <div class="header-search d-none d-md-flex">
-                  <form action="#">
-                    <input type="text" placeholder="Search..." />
-                    <button><i class="lni lni-search-alt"></i></button>
-                  </form>
-                </div>
+                
               </div>
             </div>
             <div class="col-lg-7 col-md-7 col-6">
@@ -224,7 +220,16 @@
         </div>
       </header>
       <!-- ========== header end ========== -->
-    </main>
-   
+    <main>
+      <!-- ========= All Javascript files linkup ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/dynamic-pie-chart.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.js"></script>
+    <script src="assets/js/jvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/polyfill.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
