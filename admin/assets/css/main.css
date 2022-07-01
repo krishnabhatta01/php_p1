@@ -20,6 +20,8 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+  
+
 a:focus,
 input:focus,
 textarea:focus,
@@ -371,7 +373,8 @@ h6,
 /* success buttons */
 .success-btn {
   background: #219653;
-  color: #fff; }
+  color: #fff; 
+}
   .success-btn:hover {
     color: #fff; }
 

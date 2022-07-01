@@ -28,18 +28,53 @@ class DB{
     function save($user_data){
         $this->connect();
         extract($user_data);
-        $sql = "INSERT INTO about VALUES(null, '$title', '$description', '$about_image', '$no_students', 
-            '$no_courses', '$no_trainers', '$no_events')";
-            $result = mysqli_query($this->connection, $sql);
-        if($result == true){
-            return true;
-        }else{
+        $fn = $_FILES['about_image']['name'];
+        $ftemp =$_FILES['about_image']['tmp_name'];
+
+
+            if($this->check_about_table()==false){//empty table
+                //create new record/save
+                $sql = "INSERT INTO about VALUES(null, '$title', '$description', '$fn', '$no_students', 
+                '$no_courses', '$no_trainers', '$no_events')";
+                 $result = mysqli_query($this->connection, $sql);
+                 if($result == true){
+           
+                    if($fn != '') move_uploaded_file($ftemp, "images/$fn");
+                         return true;
+                    }else{
+                        return false;
+                    }
+            }else{
+                //update
+                $sql = "UPDATE about SET title='$title', description='$description', about_image='$fn', no_students='$no_students',no_courses='$no_courses', no_trainers='$no_trainers',no_events='$no_events' WHERE true";
+                $result = mysqli_query($this->connection,$sql);
+                if($result== true){
+                    if($fn != '') move_uploaded_file($ftemp, "images/$fn");
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        
+    }
+
+    function check_about_table(){
+        $this->connect();
+        $sql = "SELECT * FROM about";
+        $result = mysqli_query($this->connection,$sql);
+        $number_records = mysqli_num_rows($result);
+
+
+        if($number_records == 0){
             return false;
+        }else{
+            $row = mysqli_fetch_assoc($result);
+            return $row;
         }
     }
 
 
-}
+}//end of class
 
 $db_object = new DB();
 
