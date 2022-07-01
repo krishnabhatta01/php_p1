@@ -1,36 +1,47 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "coding_master";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+class DB{
+
+    private $username;
+    private $password;
+    private $databasename;
+    private $server;
+    private $connection;
+
+
+    
+    function __construct(){
+
+        $this->username ='root';
+        $this->password = '';
+        $this->databasename ='coding_master';
+        $this->server ='localhost';
+
+    }
+
+    function connect (){
+        $this->connection = mysqli_connect($this->server,$this->username,$this->password,$this->databasename);
+    }
+
+    //save data in mysql databse
+
+    function save($user_data){
+        $this->connect();
+        extract($user_data);
+        $sql = "INSERT INTO about VALUES(null, '$title', '$description', '$about_image', '$no_students', 
+            '$no_courses', '$no_trainers', '$no_events')";
+            $result = mysqli_query($this->connection, $sql);
+        if($result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
 }
 
-if(isset($_POST['submit']))
-{
+$db_object = new DB();
 
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $about_image = $_POST['about_image'];
-    $no_students = $_POST['no_students'];
-    $no_courses = $_POST['no_courses'];
-    $no_trainers = $_POST['no_trainers'];
-    $no_events = $_POST['no_events'];
 
-$sql = "INSERT INTO about (id, description , about_image, no_students, no_courses, no_trainers, no_events) VALUES ('$title', '$description', '$about_image', '$no_students', '$no_courses', '$no_trainers', '$no_events')";
-
-}
-
-if (mysqli_query($conn, $sql)) { //this is line 30
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-mysqli_close($conn);
 ?>

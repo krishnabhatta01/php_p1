@@ -3,7 +3,17 @@ require('left_nav.php');
 require('header.php');
 require('DB.php');
 
+if(isset($_POST['submit'])){
+  //save data from about pageY
 
+ if ($db_object->save($_POST)){
+  $message = "About page is pulished..";
+ }
+ else {
+  $message = "Data failed to publish";
+ }
+ 
+}
 ?>
 
 
