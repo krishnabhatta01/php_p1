@@ -3,17 +3,7 @@ require('left_nav.php');
 require('header.php');
 require('DB.php');
 
-if(isset($_POST['submit'])){
-  //save data from about pageY
 
- if ($db_object->save($_POST)){
-  $message = "About page is pulished..";
- }
- else {
-  $message = "Data failed to publish";
- }
- 
-}
 ?>
 
 
@@ -99,7 +89,7 @@ if(isset($_POST['submit'])){
                 
                 <div class="input-style-1">
                   <label for="no_trainers">No. of Trainers</label>
-                  <input type="number" name="	no_trainers" />
+                  <input type="number" name="no_trainers" />
                 </div>
                 
               </div>
