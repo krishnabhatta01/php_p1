@@ -142,13 +142,38 @@ class DB{
 
     function get_one_course($course_id){
         $this->connect();
-        $sql = "SELECT * FROM courses WHERE id= '$course_id'";
+        /* $sql = "SELECT * FROM courses WHERE id= '$course_id'"; */
+        $sql = "SELECT a.id, a.course_name, a.course_fee, a.description, a.course_image, b.name, b.domain FROM courses a
+         LEFT JOIN trainers b ON a.trainer_id = b.id WHERE a.id= $course_id";
         $result = mysqli_query($this->connection, $sql);
         $row = mysqli_fetch_assoc($result);
         return $row;
     }
 
-    
+
+    function update_course($post, $file = null)
+    {
+        $this->connect();
+        extract($_POST);
+
+        if ($file == null) { //image not selected
+            $sql = "UPDATE courses SET course_name='$course_name', course_fee='$course_fee', description='$description',
+            trainer_id='$trainer_id' WHERE id='$id'";
+            $result = mysqli_query($this->connection, $sql);
+        } else { //image selected
+            $course_image = $file['course_image']['name'];
+            $temp_image = $file['course_image']['tmp_name'];
+            $sql = "UPDATE courses SET course_name='$course_name', course_fee='$course_fee', description='$description',
+            course_image='$course_image',trainer_id='$trainer_id' WHERE id='$id'";
+            $result = mysqli_query($this->connection, $sql);
+            if ($result) {
+                //update
+                if ($course_image != '') move_uploaded_file($temp_image, "images/$course_image");
+            }
+        }
+
+        return true;
+    }
 }//end of class
 
 $db_object = new DB();

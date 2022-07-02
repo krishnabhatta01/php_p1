@@ -29,8 +29,15 @@ $courses = $db_object->get_courses();
                 <?php
                 if (isset($_GET['msg']) and $_GET['msg'] == 'deleted') {
                     echo '<div class="alert alert-success">The record is deleted </div>';
-                } else {
+                } elseif (($_GET['msg']) and $_GET['msg'] == 'notdeleted') {
                     echo '<div class="alert alert-danger">The record is not deleted </div>';
+                }
+                ?>
+                <?php
+                if (isset($_GET['msg']) and $_GET['msg'] == 'updated') {
+                    echo '<div class="alert alert-success">The record is Updated </div>';
+                } elseif(($_GET['msg']) and $_GET['msg']=='Notupdated') {
+                    echo '<div class="alert alert-danger">The record is not Updated </div>';
                 }
                 ?>
 
@@ -98,7 +105,7 @@ $courses = $db_object->get_courses();
                                                             <i class="lni lni-mobile"></i>
                                                         </button>
                                                     </a>
-                                                    <a href=" #" onclick="deleteCourse(<?= $one['id'] ?>)">
+                                                    <a href="edit.php?id=<?= $one['id'] ?>">
                                                         <button class="text-danger">
                                                             <i class="lni lni-pencil-alt"></i>
                                                         </button>
