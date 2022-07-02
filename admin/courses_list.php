@@ -88,10 +88,23 @@ $courses = $db_object->get_courses();
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <a href=" #" onclick="deleteCourse(<?= $one['id'] ?>)" class="btn btn-sm btn-danger">Delete</a>
-                                                    <a href=" #" onclick="deleteCourse(<?= $one['id'] ?>)" class="btn btn-sm btn-danger">Delete</a>
-                                                    <a href=" #" onclick="deleteCourse(<?= $one['id'] ?>)" class="btn btn-sm btn-danger">Delete</a>
+                                                    <a href=" #" onclick="deleteCourse(<?= $one['id'] ?>)">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
+                                                    </a>
+                                                    <a href="view.php?id=<?= $one['id'] ?>">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-mobile"></i>
+                                                        </button>
+                                                    </a>
+                                                    <a href=" #" onclick="deleteCourse(<?= $one['id'] ?>)">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-pencil-alt"></i>
+                                                        </button>
+                                                    </a>
                                                 </div>
+
                                             </td>
                                         </tr>
                                     <?php

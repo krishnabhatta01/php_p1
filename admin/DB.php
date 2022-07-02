@@ -139,6 +139,16 @@ class DB{
              }
     }
 
+
+    function get_one_course($course_id){
+        $this->connect();
+        $sql = "SELECT * FROM courses WHERE id= '$course_id'";
+        $result = mysqli_query($this->connection, $sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+
+    
 }//end of class
 
 $db_object = new DB();
