@@ -110,6 +110,34 @@ class DB{
         return $data;
     }
 
+    //fetching courses from courses database
+    function get_courses(){ //all courses
+        $this->connect();
+        $sql = "SELECT a.id, a.course_name, a.course_fee, a.description, a.course_image, b.name, b.domain FROM courses a
+         LEFT JOIN trainers b ON a.trainer_id = b.id";
+        $result = mysqli_query($this->connection, $sql);
+        if($result == true){
+            $data=[];
+            while($row = mysqli_fetch_assoc($result)){
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+
+    //delete course from list of courses
+     function delete_course($course_id){
+        $this->connect();
+       
+        $sql = " DELETE FROM courses WHERE id='$course_id'";
+        $result = mysqli_query($this->connection, $sql);
+        if($result == true){
+              return true; 
+         } else {
+             return false;
+             }
+    }
 
 }//end of class
 

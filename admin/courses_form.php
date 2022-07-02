@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
       <!-- ========== title-wrapper start ========== -->
       <div class="title-wrapper pt-30">
         <div class="row align-items-center">
-          <h6><?php echo($message) ?></h6>
+          <h6 class="text-success"><?php echo($message) ?></h6>
           <div class="col-md-6">
             <div class="title mb-30">
               <h2>Course Page</h2>
