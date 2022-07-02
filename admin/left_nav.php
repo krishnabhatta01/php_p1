@@ -69,7 +69,7 @@
 
 
           <li class="nav-item">
-            <a href="tables.html">
+            <a href="courses_form.php">
               <span class="icon">
                 <svg
                   width="22"

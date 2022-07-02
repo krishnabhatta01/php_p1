@@ -74,6 +74,43 @@ class DB{
     }
 
 
+
+    /* SAVE COURSE */
+    function save_course($course_data, $image_data){
+        $this->connect();
+        extract($course_data);
+        $fn = $_FILES['course_image']['name'];
+        $ftemp = $_FILES['course_image']['tmp_name'];
+
+        //create new record/save
+                $sql = "INSERT INTO courses VALUES(null, '$course_name', '$description', '$course_fee', '$fn', 
+                '$trainer_id')";
+                 $result = mysqli_query($this->connection, $sql);
+                 if($result == true){
+           
+                    if($fn != '') move_uploaded_file($ftemp, "images/$fn");
+                         return true;
+                    }else{
+                        return false;
+                    }
+
+    }
+
+    //fetching trainers names from trainers database
+    function get_trainer(){
+        $this->connect();
+        $sql= "SELECT * FROM trainers";
+        $result = mysqli_query($this->connection, $sql);
+        if($result == true){
+            $data=[];
+            while($row = mysqli_fetch_assoc($result)){
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+
 }//end of class
 
 $db_object = new DB();
