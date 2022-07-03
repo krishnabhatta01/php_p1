@@ -175,6 +175,24 @@ class DB{
 
         return true;
     }
+
+    //admin login
+    function login($email, $password){
+        $this->connect();
+        //to prevent SQL Injection
+        $email = mysqli_real_escape_string($this->connection, $email);
+        $password = mysqli_real_escape_string($this->connection, $password);
+
+        $sql = "SELECT * FROM users WHERE email='$email' and password=sha1('$password') and role=9";
+        $result = mysqli_query($this->connection, $sql);
+        //$row = mysqli_fetch_assoc($result);
+        $number = mysqli_num_rows($result); //1 = logged in ,   0 = invalid username/password
+        if ($number == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }//end of class
 
 $db_object = new DB();
