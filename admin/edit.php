@@ -10,7 +10,7 @@ $trainers = $db_object->get_trainer();
 
 if (isset($_POST['submit'])) {
     if(empty($_FILES['course_image']['name'])){
-        $file = null;
+        $files = null;
     }else{
         $files = $_FILES;
     }
@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
         <!-- ========== form-elements-wrapper start ========== -->
         <div class="form-elements-wrapper">
             <form action="update_course.php" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?$course_id?>">    
+            <input type="hidden" name="id" value="<?=$course_id?>">    
             <div class="row">
                     <div class="col-lg-6">
 
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
 
                                 <div class="input-style-1">
                                     <label for="course_image">Upload Image</label>
-                                    <input value="<?= $course_detail['course_image'] ?>"  type="file" name="course_image" required />
+                                    <input value="<?= $course_detail['course_image'] ?>"  type="file" name="course_image" />
                                     <img src="images/<?=$course_detail['course_image']?>" alt="" width="40%" class="my-3 rounded">
                                     <!-- <img width="100%" border-radius="5px" src="images/<?= $data['course_image'] ?> " alt="about-image"> -->
                                 </div>

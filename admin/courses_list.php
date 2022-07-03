@@ -29,14 +29,14 @@ $courses = $db_object->get_courses();
                 <?php
                 if (isset($_GET['msg']) and $_GET['msg'] == 'deleted') {
                     echo '<div class="alert alert-success">The record is deleted </div>';
-                } elseif (($_GET['msg']) and $_GET['msg'] == 'notdeleted') {
+                } elseif (isset($_GET['msg']) and $_GET['msg'] == 'notdeleted') {
                     echo '<div class="alert alert-danger">The record is not deleted </div>';
                 }
                 ?>
                 <?php
                 if (isset($_GET['msg']) and $_GET['msg'] == 'updated') {
                     echo '<div class="alert alert-success">The record is Updated </div>';
-                } elseif(($_GET['msg']) and $_GET['msg']=='Notupdated') {
+                } elseif(isset($_GET['msg']) and $_GET['msg']=='Notupdated') {
                     echo '<div class="alert alert-danger">The record is not Updated </div>';
                 }
                 ?>

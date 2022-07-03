@@ -151,6 +151,7 @@ class DB{
     }
 
 
+    //update course
     function update_course($post, $file = null)
     {
         $this->connect();
