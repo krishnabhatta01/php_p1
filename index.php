@@ -1,5 +1,6 @@
 <?php
 require('header.php');
+require('banner.php');
 require('about.php');
 require('middle.php');
 require('courses.php');

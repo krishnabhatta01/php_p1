@@ -3,11 +3,7 @@ require("admin/DB.php");
 $about_detail = $db_object->get_about();
 ?>
 <!-- ======= About Section ======= -->
-<link href="assets/css/style.css" rel="stylesheet">
 
-
-<!-- Template Main CSS File -->
-<link href="assets/css/style.css" rel="stylesheet">
 <section id="about" class="about">
     <div class="container" data-aos="fade-up">
 
@@ -26,7 +22,7 @@ $about_detail = $db_object->get_about();
                     <?= $about_detail['description'] ?>-
                 </p>
 
-                <a href="about.php" class="learn-more-btn">Learn More</a>
+                <a href="about_menu.php" class="learn-more-btn">Learn More</a>
             </div>
         </div>
 

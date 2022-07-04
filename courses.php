@@ -28,8 +28,8 @@
                                </div>
 
                                <h3><a href="course-details.html"><?= $oneCourse['course_name'] ?></a></h3>
-                               <p><?=isset($data['description'])?></p>
-                               <div class="trainer d-flex justify-content-between align-items-center">
+                               <p><?=$oneCourse['description']?></p>
+                               <div class="trainer d-flex justify-content-between align-items-end">
                                    <div class="trainer-profile d-flex align-items-center">
                                        <img src="admin/images/trainers/trainer-1.jpg" class="img-fluid" alt="">
                                        <span><?= $oneCourse['name'] ?></span>

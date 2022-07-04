@@ -49,28 +49,20 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="active" href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="courses.php">Courses</a></li>
-                    <li><a href="trainers.php">Trainers</a></li>
-                    <li><a href="events.php">Events</a></li>
+                    <li><a href="about_menu.php">About</a></li>
+                    <li><a href="courses_menu.php">Courses</a></li>
+                    <li><a href="trainers_menu.php">Trainers</a></li>
                     
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact_menu.php">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
-            <a href="courses.html" class="get-started-btn">Get Started</a>
+            <a href="courses_menu.php" class="get-started-btn">Get Started</a>
 
         </div>
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Learning Today,<br>Leading Tomorrow</h1>
-            <h2>We are team of talented designers making websites with Bootstrap</h2>
-            <a href="courses.html" class="btn-get-started">Get Started</a>
-        </div>
-    </section><!-- End Hero -->
+    
 
     <main id="main">
