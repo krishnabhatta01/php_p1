@@ -193,6 +193,16 @@ class DB{
             return false;
         }
     }
+
+    //------------------------------FRONT-END DATABASE HANDLINE HERE -----------------------------
+    function get_about()
+    {
+        $this->connect();
+        $sql = "SELECT * FROM about";
+        $result = mysqli_query($this->connection, $sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
 }//end of class
 
 $db_object = new DB();
