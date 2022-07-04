@@ -95,6 +95,25 @@ class DB{
                     }
 
     }
+    /* SAVE trainers */
+    function save_trainers($trainer_data, $image_data)
+    {
+        $this->connect();
+        extract($trainer_data);
+        $fn = $_FILES['trainer_image']['name'];
+        $ftemp = $_FILES['trainer_image']['tmp_name'];
+
+        //create new record/save
+            $sql= "INSERT INTO trainers VALUES (NULL, '$name', '$about_trainer','$course_id','$fn', '$domain')";        
+            $result = mysqli_query($this->connection, $sql);
+        if ($result == true) {
+
+            if ($fn != '') move_uploaded_file($ftemp, "images/$fn");
+            return true;
+            } else {
+            return false;
+        }
+    }
 
     //fetching trainers names from trainers database
     function get_trainer(){
@@ -113,7 +132,7 @@ class DB{
     //fetching courses from courses database
     function get_courses(){ //all courses
         $this->connect();
-        $sql = "SELECT a.id, a.course_name, a.course_fee, a.description, a.course_image, b.name, b.domain FROM courses a
+        $sql = "SELECT a.id, a.course_name, a.course_fee, a.description, a.course_image, b.name, b.domain, b.about_trainer, b.trainer_image FROM courses a
          LEFT JOIN trainers b ON a.trainer_id = b.id";
         $result = mysqli_query($this->connection, $sql);
         if($result == true){
