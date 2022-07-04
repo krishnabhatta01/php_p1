@@ -37,12 +37,12 @@
             <div class="col-lg-4 d-flex align-items-stretch">
                 <div class="content">
                     <h3>Why Choose Mentor?</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                        Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                    <p text-center>
+                        We're designers, programmers, tinkerers, weiters, speakers, bikers, engineers, runner, developers, analusts, campers, authors, leaders, volunteers, parents, hard workers, and must importantly we are helpers. <br>
+                        With such a diverse groups of people, from so many different places, we bring a unique perspective to everything we do. 
                     </p>
                     <div class="text-center">
-                        <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                        <a href="about_menu.php" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -52,22 +52,22 @@
                         <div class="col-xl-4 d-flex align-items-stretch">
                             <div class="icon-box mt-4 mt-xl-0">
                                 <i class="bx bx-receipt"></i>
-                                <h4>Corporis voluptates sit</h4>
-                                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                                <h4>Learn</h4>
+                                <p>To be a creative developers out there in the world full of challanges we must have the patient to learn</p>
                             </div>
                         </div>
                         <div class="col-xl-4 d-flex align-items-stretch">
                             <div class="icon-box mt-4 mt-xl-0">
                                 <i class="bx bx-cube-alt"></i>
-                                <h4>Ullamco laboris ladore pan</h4>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                                <h4>Lead</h4>
+                                <p>Once we have a deep understanding about what we do we can lead our dream project</p>
                             </div>
                         </div>
                         <div class="col-xl-4 d-flex align-items-stretch">
                             <div class="icon-box mt-4 mt-xl-0">
                                 <i class="bx bx-images"></i>
-                                <h4>Labore consequatur</h4>
-                                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                                <h4>Explore</h4>
+                                <p>Being developer is and was never a easy thing to do so to further uplift our skills we must explore</p>
                             </div>
                         </div>
                     </div>
@@ -86,73 +86,73 @@
             <div class="col-lg-3 col-md-4">
                 <div class="icon-box">
                     <i class="ri-store-line" style="color: #ffbb2c;"></i>
-                    <h3><a href="">Lorem Ipsum</a></h3>
+                    <h3><a href="">Exposure</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
                 <div class="icon-box">
                     <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-                    <h3><a href="">Dolor Sitema</a></h3>
+                    <h3><a href="">productivity</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
                 <div class="icon-box">
                     <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-                    <h3><a href="">Sed perspiciatis</a></h3>
+                    <h3><a href="">Plan</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
                 <div class="icon-box">
                     <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-                    <h3><a href="">Magni Dolores</a></h3>
+                    <h3><a href="">Creativity</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-database-2-line" style="color: #47aeff;"></i>
-                    <h3><a href="">Nemo Enim</a></h3>
+                    <h3><a href="">Earn</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-                    <h3><a href="">Eiusmod Tempor</a></h3>
+                    <h3><a href="">Explore</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-                    <h3><a href="">Midela Teren</a></h3>
+                    <h3><a href="">Learn</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-                    <h3><a href="">Pira Neve</a></h3>
+                    <h3><a href="">Imagine</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                    <h3><a href="">Dirada Pack</a></h3>
+                    <h3><a href="">Stability</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-disc-line" style="color: #b20969;"></i>
-                    <h3><a href="">Moton Ideal</a></h3>
+                    <h3><a href="">lead</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-base-station-line" style="color: #ff5828;"></i>
-                    <h3><a href="">Verdo Park</a></h3>
+                    <h3><a href="">Deploy</a></h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
                 <div class="icon-box">
                     <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-                    <h3><a href="">Flavor Nivelanda</a></h3>
+                    <h3><a href="">Identity</a></h3>
                 </div>
             </div>
         </div>
