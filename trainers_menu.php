@@ -11,7 +11,7 @@ $data = $db_object->get_trainer();
   <div class="breadcrumbs">
     <div class="container">
       <h2>Trainers</h2>
-      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      <p>We have more than 50 highly experienced trainers to train, guide and motivate you to get your best skills. We hire more than 10 trainers each months to establish smooth and effective learning environment. Below are some of our highly skilled trainers that we have got.</p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -27,7 +27,7 @@ $data = $db_object->get_trainer();
               <img src="admin/images/<?= $one['trainer_image'] ?>" class="img-fluid" alt="" width=100%>
               <div class="member-content">
                 <h4><?= $one['name'] ?></h4>
-                <span><?= $one['domain'] ?></span>
+                <span><?= strtoupper($one['domain']) ?></span>
                 <p>
                   <?= $one['about_trainer'] ?>
                 </p>

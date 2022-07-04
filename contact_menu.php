@@ -9,7 +9,7 @@ require('header.php');
     <div class="breadcrumbs" data-aos="fade-in">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+            <p>If you want to know more about us in person you can do so. More inquery please fill up the given form or simply contact us. You can even visit out main office. For your convinence map of out office is also provided below. </p>
         </div>
     </div><!-- End Breadcrumbs -->
 
@@ -28,19 +28,19 @@ require('header.php');
                         <div class="address">
                             <i class="bi bi-geo-alt"></i>
                             <h4>Location:</h4>
-                            <p>A108 Adam Street, New York, NY 535022</p>
+                            <p>Khusibun-16, Nayabazar, Kathmandu</p>
                         </div>
 
                         <div class="email">
                             <i class="bi bi-envelope"></i>
                             <h4>Email:</h4>
-                            <p>info@example.com</p>
+                            <p>bhattakrishna111@gmail.com</p>
                         </div>
 
                         <div class="phone">
                             <i class="bi bi-phone"></i>
                             <h4>Call:</h4>
-                            <p>+1 5589 55488 55s</p>
+                            <p>+977-1234567890</p>
                         </div>
 
                     </div>

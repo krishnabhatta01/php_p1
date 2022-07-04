@@ -10,7 +10,7 @@ $data = $db_object->get_courses();
 <div class="breadcrumbs">
     <div class="container">
         <h2>Courses</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p>We offer interesting , competitive, real world project based courses. So we highly recommend any level students to enroll our courses. We gurentee that end result of the respective courses will teach you skills that isn't taught by any other sources. Here's some of the courses that we are offering right now. </p>
     </div>
 </div><!-- End Breadcrumbs -->
 
@@ -33,7 +33,7 @@ $data = $db_object->get_courses();
                         <div class="course-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4><?= strtoupper($oneCourse['domain']) ?></h4>
-                                <p class="price"><?= $oneCourse['course_fee'] ?></p>
+                                <p class="price">$<?= $oneCourse['course_fee'] ?></p>
                             </div>
 
                             <h3><a href="course-details.html"><?= $oneCourse['course_name'] ?></a></h3>

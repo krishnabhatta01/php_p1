@@ -24,7 +24,8 @@ $about_detail = $db_object->get_about();
     <div class="breadcrumbs" data-aos="fade-in">
         <div class="container">
             <h2>About Us</h2>
-            <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+            <p>We are the small developers collabrating together making a great opportunities to learn from each other. We are eager to learn and we are capable of 
+                making great, reliable, complex websites. This page tells everything about us.  </p>
         </div>
     </div><!-- End Breadcrumbs -->
 
