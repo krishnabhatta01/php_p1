@@ -1,0 +1,16 @@
+{
+    "name": "dell/mvc_framework",
+    
+    "authors": [
+        {
+            "name": "krishna",
+            "email": "bhattakrishna111@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4": {
+            "app\\":"./"
+        }
+    },
+    "require": {}
+}
