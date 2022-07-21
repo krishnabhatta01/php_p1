@@ -22,11 +22,33 @@ class Router{
        $callback = $this->routes[$method][$path] ?? false;
        if($callback === false){
         echo "not found";
-        exit;
+        
+       }
+
+       if(is_string($callback)){
+            return $this->renderView($callback);
        }
        echo call_user_func($callback);
     }
 
+    public function renderView($view){
+        $layoutcontent = $this->layoutcontent();
+        $viewcontent = $this->renderOnlyView($view);
+        return str_replace('{{content}}', $viewcontent , $layoutcontent);
+        include_once Application::$ROOT_DIR ."/views/$view.php" ;
+    }
 
+    /* protected */function layoutcontent(){
+        ob_start();
+        include_once Application::$ROOT_DIR . "/views/layouts/main.php";
+        return ob_get_clean();
+
+    }
+
+    function renderOnlyView($view){
+        ob_start();
+        include_once Application::$ROOT_DIR . "/views/$view.php";
+        return ob_get_clean();
+    }
 
 }
