@@ -5,10 +5,12 @@ namespace app\core;
 class Router{   
     public Request $request;
     protected array $routes = [];
+    public Response $response;
 
-    public function __construct (\app\core\Request $request)
+    public function __construct (Request $request, Response $response)
     {
         $this->request = $request;
+        $this->response = $response;
     }
 
 
@@ -16,12 +18,18 @@ class Router{
         $this->routes['get'][$path] = $callback;
     }
 
+    function post($path, $callback)
+    {
+        $this->routes['post'][$path] = $callback;
+    }
+
     function resolve(){
        $path= $this->request->getPath();
        $method = $this->request->getMethod();
        $callback = $this->routes[$method][$path] ?? false;
        if($callback === false){
-        echo "not found";
+        $this->response->setStatusCode(404);
+        return $this->renderView("404");
         
        }
 
@@ -31,11 +39,19 @@ class Router{
        echo call_user_func($callback);
     }
 
+    public function renderContent($viewContent)
+    {
+        $layoutcontent = $this->layoutcontent();
+        
+        return str_replace('{{content}}', $viewContent, $layoutcontent);
+       
+    }
+
     public function renderView($view){
         $layoutcontent = $this->layoutcontent();
         $viewcontent = $this->renderOnlyView($view);
         return str_replace('{{content}}', $viewcontent , $layoutcontent);
-        include_once Application::$ROOT_DIR ."/views/$view.php" ;
+        
     }
 
     /* protected */function layoutcontent(){
